@@ -28,7 +28,7 @@ import {
 } from "./ui-lib";
 import Locale from "../locales";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { getClientConfig } from "../config/client";
 
 export function PluginPage() {
@@ -345,10 +345,10 @@ export function PluginPage() {
             </List>
             <List>
               <ListItem title={Locale.Plugin.EditModal.Content}>
-                <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <div className={pluginStyles["plugin-schema"]}>
                   <input
                     type="text"
-                    style={{ minWidth: 200, marginRight: 20 }}
+                    style={{ minWidth: 200 }}
                     onInput={(e) => setLoadUrl(e.currentTarget.value)}
                   ></input>
                   <IconButton
